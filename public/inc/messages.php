@@ -43,4 +43,4 @@ $contacts = MessageController::getUserContactAction();
 	</div>
 </div>
 
-<script src="/Twitter/public/js/message.js"></script>
+<script src="/Projet_Web_tweet_academie/public/js/message.js"></script>

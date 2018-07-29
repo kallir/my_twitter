@@ -77,7 +77,7 @@ class RegisterModel
 		$sql->bindValue(':username', htmlspecialchars($this->username));
 		$sql->bindValue(':email', htmlspecialchars($this->email));
 		$sql->bindValue(':password', htmlspecialchars(($hashed)));
-		$sql->bindValue(':avatar', "/Twitter/public/img/default.jpg");
+		$sql->bindValue(':avatar', "/Projet_Web_tweet_academie/public/img/default.jpg");
 
 		$sql->execute();
 		return 1;

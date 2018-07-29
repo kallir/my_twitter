@@ -14,7 +14,7 @@ $(document).ready(function () {
 				'<li class="tweet list-group-item" value="'+value.username+'"'
 				+' idTweet="'+lasttweet+'">'
 				+ '<img src="'+value.avatar+'" class="icon-tweet">'
-				+ '<a href="/Twitter/profile/'
+				+ '<a href="/Projet_Web_tweet_academie/profile/'
 				+ value.username + '">@' + value.username + '</a><br>'
 				+ value.content_tweet
 				+ '</li>');
@@ -36,7 +36,7 @@ $(document).ready(function () {
 						+' idTweet="'+lasttweet+'">'
 						+ '<img src="'+value.avatar+'" class="icon-tweet">'
 
-						+ '<a href="/Twitter/profile/'
+						+ '<a href="/Projet_Web_tweet_academie/profile/'
 						+ value.username + '">@' + value.username + '</a><br>'
 						+ value.content_tweet
 						+ '</li>');
@@ -127,25 +127,25 @@ $(document).ready(function () {
 		if ("@"+name != $("#myUsername").html()) {
 			$("#btnTwt").html('<a class="btn" id="btnPrvMsg" value="'+name+'" '
 				+'data-toggle="modal" data-target="#messageToModal">'
-				+'<img src="/Twitter/public/img/glyphicons/'
+				+'<img src="/Projet_Web_tweet_academie/public/img/glyphicons/'
 				+'glyphicons-11-envelope.png">'
 				+'</a>');
 			$("#btnTwt").append('<a class="btn" id="btnFollow" value="'+name+'">'
-				+'<img src="/Twitter/public/img/glyphicons/'
+				+'<img src="/Projet_Web_tweet_academie/public/img/glyphicons/'
 				+'glyphicons-152-new-window.png">'
 				+'</a>');
 		}
 		$("#btnTwt").append('<a class="btn" id="btnRT" value="'+idTweet+'">'
-			+'<img src="/Twitter/public/img/glyphicons/'
+			+'<img src="/Projet_Web_tweet_academie/public/img/glyphicons/'
 			+'glyphicons-230-retweet-2.png">'
 			+'</a>');
 		$("#btnTwt").append('<a class="btn" id="btnLike" value="'+idTweet+'">'
-			+'<img src="/Twitter/public/img/glyphicons/'
+			+'<img src="/Projet_Web_tweet_academie/public/img/glyphicons/'
 			+'glyphicons-20-heart-empty.png">'
 			+'</a>');
 		$("#btnTwt").append('<a class="btn" id="btnComment" value="'+idTweet+'" '
 				+'data-toggle="modal" data-target="#commentModal">'
-				+'<img src="/Twitter/public/img/glyphicons/'
+				+'<img src="/Projet_Web_tweet_academie/public/img/glyphicons/'
 				+'glyphicons-245-conversation.png">'
 				+'</a>');
 		if ("@"+name == $("#myUsername").html()) {
@@ -203,7 +203,7 @@ $(document).ready(function () {
 				$.each(obj[0], function (k, value) {
 					$("#commentList").append(
 						'<li class="list-group-item bg-color text-secondary">'
-						 + '<a href="/Twitter/profile/'
+						 + '<a href="/Projet_Web_tweet_academie/profile/'
 						+ value.username + '">@' + value.username + '</a><br>'
 						+ value.content_comment
 						+ ($("#myUsername").html() == "@"+value.username ? '<a class="btnDelCom float-right"'

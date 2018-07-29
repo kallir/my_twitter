@@ -1,6 +1,6 @@
 /* Login & Register */
 body.signinPage {
-	background-image: url("/Twitter/public/img/background_home.jpg");
+	background-image: url("/Projet_Web_tweet_academie/public/img/background_home.jpg");
 	background-size: auto;
 	background-attachment: fixed;
     background-position: center; 
@@ -137,6 +137,6 @@ nav {
 }
 
 .glyphicons-conversation {
-	background-image: url("/Twitter/public/img/glyphicons/glyphicons-245-conversation.png");
+	background-image: url("/Projet_Web_tweet_academie/public/img/glyphicons/glyphicons-245-conversation.png");
 
 }

@@ -9,7 +9,7 @@ $(document).ready(function () {
 			$("#searchComp").append("<div id='drpdwnSrh' class='dropdown-menu show'></div>");
 			var obj = JSON.parse(data);
 			$.each(obj[0], function(k, v) {
-				$("#drpdwnSrh").append("<a href='/Twitter/profile/"+v.username+"'"
+				$("#drpdwnSrh").append("<a href='/Projet_Web_tweet_academie/profile/"+v.username+"'"
 					+ " class='dropdown-item'>"
 					+ "<img class='icon-tweet' src='"
 					+v.avatar+"'>"
@@ -17,7 +17,7 @@ $(document).ready(function () {
 			});
 			$.each(obj[1], function(k, v) {
 				// <a href='#' class='dropdown-item'>
-				$("#drpdwnSrh").append("<a href='/Twitter/tags/"+v.name_hashtag+"'"
+				$("#drpdwnSrh").append("<a href='/Projet_Web_tweet_academie/tags/"+v.name_hashtag+"'"
 					+" class='dropdown-item'>"
 					+ "#" + v.name_hashtag + "</a>");
 			});
@@ -32,9 +32,9 @@ $(document).ready(function () {
 		e.preventDefault();
 		var search = $("#searchComp a")[0].textContent;
 		if (search.slice(0,1) == "@") {
-			location.href = "/Twitter/profile/" + search.substring(1, search.length);
+			location.href = "/Projet_Web_tweet_academie/profile/" + search.substring(1, search.length);
 		} else if (search.slice(0,1) == "#") {
-			location.href = "/Twitter/tags/" + search.substring(1, search.length);
+			location.href = "/Projet_Web_tweet_academie/tags/" + search.substring(1, search.length);
 		}
 	});
 });

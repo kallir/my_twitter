@@ -18,7 +18,7 @@ include 'inc/header.php';
 					</div>
 					<input type="submit" value="Submit" id="submitSignin" class="btn btn-primary mx-sm-3">
 					<p class="mx-sm-3 change" id="error" style="color: red;"></p>
-					<p class=" mx-sm-3 change">Not a member yet? <a href="/Twitter/register">Register here</a></p>
+					<p class=" mx-sm-3 change">Not a member yet? <a href="/Projet_Web_tweet_academie/register">Register here</a></p>
 				</form>
 			</div>
 		</div>
@@ -27,6 +27,6 @@ include 'inc/header.php';
 	src="https://code.jquery.com/jquery-3.3.1.js"
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
-	<script src="/Twitter/public/js/script.js"></script>
+	<script src="/Projet_Web_tweet_academie/public/js/script.js"></script>
 </body>
 </html>

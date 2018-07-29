@@ -23,4 +23,4 @@
 	<button type="button" class="btn btn-primary" id="sndPrvMsg">Send message</button>
 </div>
 
-<script src="/Twitter/public/js/message.js"></script>
+<script src="/Projet_Web_tweet_academie/public/js/message.js"></script>

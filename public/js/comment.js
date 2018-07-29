@@ -11,7 +11,7 @@ $(document).ready(function () {
 				if (k == "ok") {
 					$("#commentList").append(
 						'<li class="list-group-item bg-color text-secondary">'
-						+ '<a href="/Twitter/profile/'
+						+ '<a href="/Projet_Web_tweet_academie/profile/'
 						+ v + '">@' + v + '</a><br>'
 						+ $("#cmtContent").val()
 						+ '</li><hr>');

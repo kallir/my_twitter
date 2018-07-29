@@ -18,7 +18,7 @@ include 'inc/modal.php'; ?>
 		</div>
 		<div class="col-sm-12 col-md-8 col-lg-7">
 			<div class="bg-color rounded">
-				<form method="POST" action="/Twitter/account/edit">
+				<form method="POST" action="/Projet_Web_tweet_academie/account/edit">
 					<div>
 						<div class="form-group mx-sm-3 mb-2">
 							<label class="custom-label mx-sm-3 mb-2">Thème</label>
@@ -65,7 +65,7 @@ include 'inc/modal.php'; ?>
 								</small>
 							</div>
 							<input class="btn btn-primary mx-sm-3" type="submit" id="profileEdit" value="Save Profile">
-							<input class="btn btn-danger mx-sm-3" type="button" id="DeleteUser" name="deleteAccount" value="Delete Profile" >
+							<input class="btn btn-danger mx-sm-3" type="button" id="DeleteUser" name="deleteAccount" value="Delete Profile">
 						</div>
 					</div>
 				</form>

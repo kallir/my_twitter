@@ -4,7 +4,7 @@
 			<ul class="bg-color list-group">
 				<?php foreach ($hashtags as $tag): ?>
 					<li class="list-group-item bg-color text-secondary">
-						<a href="/Twitter/tags/<?=$tag['name']?>">#<?=$tag['name']?></a> - <small><i><?=$tag['count']?> tweets</i></small>
+						<a href="/Projet_Web_tweet_academie/tags/<?=$tag['name']?>">#<?=$tag['name']?></a> - <small><i><?=$tag['count']?> tweets</i></small>
 					</li>
 				<?php endforeach ?>
 			</ul>

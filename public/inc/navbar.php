@@ -6,11 +6,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 				<ul class="inf navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item"><a class="nav-link" href="/Twitter">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="/Twitter/mentions">Mentions</a></li>
+					<li class="nav-item"><a class="nav-link" href="/Projet_Web_tweet_academie">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/Projet_Web_tweet_academie/mentions">Mentions</a></li>
 					<li class="nav-item"><a class="nav-link" id="msgLink" data-toggle="modal" data-target="#messageModal" href="#">Messages</a></li>
 				</ul>
-				<img src="/Twitter/public/img/birdie.png" alt="logo" width="35" height="35" class="d-inline-block align-top">
+				<img src="/Projet_Web_tweet_academie/public/img/birdie.png" alt="logo" width="35" height="35" class="d-inline-block align-top">
 				<form class="form-inline my-2 my-lg-0" id="formSearch">
 					<div class="dropdown">
 					<input id="searchHome" class="form-control mr-sm-2" type="text" placeholder="Search" name="search">

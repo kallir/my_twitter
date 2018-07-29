@@ -7,7 +7,7 @@ class ProfileController
 	{
 		if (!Controller::isConnected())
 		{
-			header("Location: /Twitter/signin/");
+			header("Location: /Projet_Web_tweet_academie/signin/");
 			return 0;
 		}
 		Controller::renderAction("profile");

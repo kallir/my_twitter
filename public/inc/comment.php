@@ -12,4 +12,4 @@
 	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 </div>
 
-<script src="/Twitter/public/js/comment.js"></script>
+<script src="/Projet_Web_tweet_academie/public/js/comment.js"></script>

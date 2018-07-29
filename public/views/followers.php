@@ -23,7 +23,7 @@ include 'inc/modal.php'; ?>
 				<ol class="list-group">
 				<?php 
 				foreach($followers_list as $subs):?>
-					<li class="list-group-item"><img alt="avatar" src="<?=$subs["avatar"]?>"><a href="/Twitter/profile/<?=$subs["username"]?>">@<?=$subs["username"]?></a>
+					<li class="list-group-item"><img alt="avatar" src="<?=$subs["avatar"]?>"><a href="/Projet_Web_tweet_academie/profile/<?=$subs["username"]?>">@<?=$subs["username"]?></a>
 					</li>
 				<?php endforeach;
 				?>

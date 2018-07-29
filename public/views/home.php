@@ -30,6 +30,6 @@ include 'inc/modal.php'; ?>
 	</div>
 </div>
 	<?php include 'inc/footer.php';?>
-	<script src="/Twitter/public/js/scroll.js"></script>
+	<script src="/Projet_Web_tweet_academie/public/js/scroll.js"></script>
 </body>
 </html>

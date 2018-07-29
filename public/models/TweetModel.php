@@ -123,7 +123,7 @@ class TweetModel
 		foreach ($tweets as $k => $tweet) {
 			preg_match_all("/#([a-zA-Z0-9]+)/", $tweet['content_tweet'], $matches);
 			foreach ($matches[0] as $key => $tag) {
-				$replace = "<a href=\"/Twitter/tags/".$matches[1][$key]."\">$tag</a>";
+				$replace = "<a href=\"/Projet_Web_tweet_academie/tags/".$matches[1][$key]."\">$tag</a>";
 				$tweet['content_tweet'] = str_replace($tag, $replace, $tweet['content_tweet']);
 			}
 			$tweets[$k] = $tweet;
@@ -131,7 +131,7 @@ class TweetModel
 		foreach ($tweets as $k => $tweet) {
 			preg_match_all("/@([a-zA-Z0-9]+)/", $tweet['content_tweet'], $matches);
 			foreach ($matches[0] as $key => $mention) {
-				$replace = "<a href=\"/Twitter/profile/".$matches[1][$key]."\">$mention</a>";
+				$replace = "<a href=\"/Projet_Web_tweet_academie/profile/".$matches[1][$key]."\">$mention</a>";
 				$tweet['content_tweet'] = str_replace($mention, $replace, $tweet['content_tweet']);
 			}
 			$tweets[$k] = $tweet;
@@ -145,8 +145,8 @@ class TweetModel
 			preg_match_all("/~([a-zA-Z0-9]{4})/", $tweet['content_tweet'], $m);
 			if (!empty($m[0])) {
 				foreach ($m[0] as $key => $img) {
-					$ext = is_file("/Twitter/public/upload/".$m[1][$key].".png") ? ".png" : ".jpg";
-					$replace = "<p><img src=\"/Twitter/public/upload/".$m[1][$key].$ext."\"></p>";
+					$ext = is_file("/Projet_Web_tweet_academie/public/upload/".$m[1][$key].".png") ? ".png" : ".jpg";
+					$replace = "<p><img src=\"/Projet_Web_tweet_academie/public/upload/".$m[1][$key].$ext."\"></p>";
 					$tweet['content_tweet'] = str_replace($m[0][$key], $replace, $tweet['content_tweet']);
 				}
 			}

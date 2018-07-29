@@ -14,7 +14,7 @@ $(document).ready(function () {
 						'<li class="tweet list-group-item" value="'+value.username+'"'
 						+' idTweet="'+lasttweet+'">'
 						+ '<img src="'+value.avatar+'" class="icon-tweet">'
-						+ '<a href="/Twitter/profile/'
+						+ '<a href="/Projet_Web_tweet_academie/profile/'
 						+ value.username + '">@' + value.username + '</a><br>'
 						+ value.content_tweet
 						+ '</li>');

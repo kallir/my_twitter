@@ -31,9 +31,8 @@ class AccountController
 		$edit->EditAction();
 	}
 
-	public static function changePassAction()
+	public static function delAccountAction()
 	{
-		$change = new AccountModel();
-		$change->ChangePassAction();
+		AccountModel::delAccountAction();
 	}
 }

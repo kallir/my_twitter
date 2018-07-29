@@ -11,7 +11,7 @@ $(document).ready(function () {
 						$("#error").html(value);
 					}
 					if (key == "Signup" && value == "Valid") {
-						location.href = "/Twitter/signin";
+						location.href = "/Projet_Web_tweet_academie/signin";
 					}
 				});
 			});
@@ -29,7 +29,7 @@ $(document).ready(function () {
 						$("#error").html(value);
 					}
 					if (key == "Signin" && value == "ok") {
-						location.href = "/Twitter/";
+						location.href = "/Projet_Web_tweet_academie/";
 					}
 				});
 			});
@@ -39,7 +39,7 @@ $(document).ready(function () {
 	$("#logout").click(function() {
 		$.get("?action=Logout")
 		.done(() => {
-			location.href = "/Twitter/signin";
+			location.href = "/Projet_Web_tweet_academie/signin";
 		});
 	});
 
@@ -48,6 +48,18 @@ $(document).ready(function () {
 		$.get("?page=message")
 		.done((data) => {
 			$("#msgModal").html(data);
+		});
+	});
+
+	$("#DeleteUser").click(function() {
+		$.get("?page=account&action=delAccount")
+		.done((data) => {
+			var obj = JSON.parse(data);
+			$.each(obj, (k, v) => {
+				if (k == "ok") {
+					$("#logout").click();
+				}
+			});
 		});
 	});
 });
