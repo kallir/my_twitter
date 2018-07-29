@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
-	<title>Tweet Academie - Register</title>
-</head>
-<body>
+<?php
+include 'inc/header.php';
+?>
+<body class="signinPage">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="offset-md-6 offset-lg-4 offset-xl-4 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+			<div class="offset-md-6 offset-lg-4 offset-xl-4 col-sm-12 col-md-8 col-lg-4 col-xl-3">
 				<h1 class="text-center">Register</h1>
 				<form id="formRegister">
 					<div class="form-group mx-sm-3 mb-2">
@@ -30,14 +25,21 @@
 					</div>
 					<div class="form-group mx-sm-3 mb-2">
 						<label for="Password">Password</label>
-						<input type="password" id="Password" class="form-control" name="Password"  placeholder="Password">
+						<input type="password" id="Password" class="form-control" name="Password"  placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 					</div>
 					<div class="form-group mx-sm-3 mb-2">
 						<label for="Password">Confirm password</label>
-						<input type="password" id="PasswordConfirm" class="form-control" name="PasswordConfirm" placeholder="Password">
+						<input type="password" id="confirmPassword" class="form-control" name="confirmPassword" placeholder="Confirm Your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+					</div>
+					<div id="message">
+						<h3>Password must contain the following:</h3>
+						<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+						<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+						<p id="number" class="invalid">A <b>number</b></p>
+						<p id="length" class="invalid">Minimum <b>8 characters</b></p>
 					</div>
 					<div class="text-center">
-						<input type="button" value="Submit" id="submitRegister" class="btn btn-primary mx-sm-3">
+						<input type="submit" value="Submit" id="submitRegister" class="btn btn-primary mx-sm-3">
 						<p class="mx-sm-3 change" id="error" style="color: red;"></p>
 						<p class=" mx-sm-3 change">Already a member? <a href="./signin/">Sign in here</a></p>
 					</div>
@@ -49,6 +51,7 @@
 	src="https://code.jquery.com/jquery-3.3.1.js"
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
-	<script type="text/javascript" src="public/js/script.js"></script>
+	<script src="/Twitter/public/js/jschris.js"></script>
+	<script src="/Twitter/public/js/script.js"></script>
 </body>
 </html>

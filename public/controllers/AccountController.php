@@ -18,4 +18,22 @@ class AccountController
 		$signin = new SigninModel();
 		$signin->signinAction();
 	}
+	
+	public static function themeAction()
+	{
+		$theme = new AccountModel();
+		$theme->ThemeAction();
+	}
+	
+	public static function editAction()
+	{
+		$edit = new AccountModel();
+		$edit->EditAction();
+	}
+
+	public static function changePassAction()
+	{
+		$change = new AccountModel();
+		$change->ChangePassAction();
+	}
 }

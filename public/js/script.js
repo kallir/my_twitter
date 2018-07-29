@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	// Register Button
-	$("#submitRegister").click(function() {
+	$("#submitRegister").click(function(e) {
+		e.preventDefault();
 		$.post("?page=register&action=register",
 			$("#formRegister").serializeArray(),
 			function(data) {
@@ -10,14 +11,15 @@ $(document).ready(function () {
 						$("#error").html(value);
 					}
 					if (key == "Signup" && value == "Valid") {
-						location.href = "./signin";
+						location.href = "/Twitter/signin";
 					}
 				});
 			});
 	});
-
+	
 	// Login Button
-	$("#submitSignin").click(function() {
+	$("#submitSignin").click(function(e) {
+		e.preventDefault();
 		$.post("?page=signin&action=signin",
 			$("#formSignin").serializeArray(),
 			function(data) {
@@ -27,9 +29,25 @@ $(document).ready(function () {
 						$("#error").html(value);
 					}
 					if (key == "Signin" && value == "ok") {
-						location.href = "./";
+						location.href = "/Twitter/";
 					}
 				});
 			});
+	});
+
+		//Log out Button
+	$("#logout").click(function() {
+		$.get("?action=Logout")
+		.done(() => {
+			location.href = "/Twitter/signin";
+		});
+	});
+
+		// Message 
+	$("#msgLink").click(function() {
+		$.get("?page=message")
+		.done((data) => {
+			$("#msgModal").html(data);
+		});
 	});
 });

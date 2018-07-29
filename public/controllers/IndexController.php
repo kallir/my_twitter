@@ -6,7 +6,19 @@ class IndexController
 	{
 		if (!Controller::isConnected())
 		{
-			header("Location: ./signin/");
+			header("Location: /Twitter/signin/");
+			return 0;
 		}
+		Controller::renderAction("home");
+	}
+
+	public static function LogoutAction() 
+	{
+		Session::destroySessionAction();
+	}
+
+	public static function uploadAction()
+	{
+		Controller::uploadAction();
 	}
 }

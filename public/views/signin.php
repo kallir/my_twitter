@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Tweet Academie - Sign in</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/Twitter/public/css/style.css">
-</head>
-<body>
+<?php
+include 'inc/header.php';
+?>
+<body class="signinPage">
 
 	<div class="container-fluid">
 		<div class="row">
@@ -19,9 +14,9 @@
 					</div>
 					<div class="form-group mx-sm-3 mb-2">
 						<label for="signPassword">Password</label>
-						<input type="password" class="form-control" name="password" placeholder="Password">
+						<input type="password" id="signPassword" class="form-control" name="password" placeholder="Password">
 					</div>
-					<input type="button" value="Submit" id="submitSignin" class="btn btn-primary mx-sm-3">
+					<input type="submit" value="Submit" id="submitSignin" class="btn btn-primary mx-sm-3">
 					<p class="mx-sm-3 change" id="error" style="color: red;"></p>
 					<p class=" mx-sm-3 change">Not a member yet? <a href="/Twitter/register">Register here</a></p>
 				</form>
@@ -32,6 +27,6 @@
 	src="https://code.jquery.com/jquery-3.3.1.js"
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/Twitter/public/js/script.js"></script>
+	<script src="/Twitter/public/js/script.js"></script>
 </body>
 </html>

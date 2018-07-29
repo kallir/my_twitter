@@ -18,7 +18,7 @@ class SigninModel
 	}
 
 	public function checkAccountAction(){
-		$query = "select * from user where username like :username";
+		$query = "SELECT * FROM user WHERE username LIKE :username";
 		$sql = PDOConnection::prepareAction($query);
 		$sql->bindParam(':username', $this->username);
 		$sql->execute();
@@ -34,14 +34,15 @@ class SigninModel
 
 	public function checkPasswordAction(){
 		if($this->checkAccountAction()){
-			$query = "select password from user where username like :username";
+			$query = "SELECT password FROM user WHERE username LIKE :username";
 			$sql = PDOConnection::prepareAction($query);
 			$sql->bindParam(':username', $this->username);
 			$sql->execute();
 			$db_password = $sql->fetch();
 
 			$this->password .= "si tu aimes la wac tape dans tes mains";
-			$hashed_input = hash('sha1', $this->password);
+			$hashed_input = hash('ripemd160', $this->password);
+
 			if($hashed_input !== $db_password['password']){
 				$alert = "Incorrect password/username combination";
 				echo json_encode(array("error"=>"$alert"));
